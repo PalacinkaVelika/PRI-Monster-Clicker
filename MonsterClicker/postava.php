@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="main-container">
-        <div class="inner-container p-3">
+    <div class="inner-container p-3">
             <button class="list-group-item list-group-item-action custom-link" style="height: 25%; width: 100%; margin-bottom: 10px;">
                 <a href="index.php">Dobrodružství</a>
             </button>
@@ -27,20 +27,14 @@
         <div class="inner-container p-3">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h2 class="display-4">Dobrodružství</h2>
+                  <h2 class="display-4">Postava</h2>
               </div>
           </div>
           <div class="row justify-content-center">
                 <div class="col-6">
-                    <img src="imgs/zombo.png" class="img-fluid square-image enemyImg" alt="Image" >
+                    <img src="imgs/adventurer.png" class="img-fluid square-image" alt="Image">
                 </div>
           </div>
-          
-    <div class="row justify-content-center hp-slider-wrapper">
-        <div class="col-6">
-            <input type="range" min="0" max="100" value="100" class="form-range hp-slider" id="hpSlider">
-        </div>
-    </div>
         </div>
         <div class="inner-container p-3">
           <div class="row justify-content-center">
@@ -49,7 +43,6 @@
               </div>
           </div>
             <p>Životy: <mark id="hp">100</mark></p>
-            <p>Obrana: <mark id="def">15</mark></p>
             <p>Rychlost: <mark id="spd">5</mark></p>
             <p>Zlato: <mark id="loot">7</mark></p>
         </div>

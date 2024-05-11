@@ -1,0 +1,126 @@
+body {
+    background-color: #451952;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: #F39F5A;
+    font: small-caps bold 16px/1.5 Arial, sans-serif;
+   }
+    .main-container {
+        width: 100%;
+        height: 99vh;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-x: auto;
+    }
+
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        height: 95%;
+        background-color: #662549;
+        margin-left:1vh;
+        margin-right:1vh;
+    }
+
+    .inner-container:nth-child(1) {
+        width: 20%;
+    }
+
+    .inner-container:nth-child(2) {
+        width: 60%;
+    }
+
+    .inner-container:nth-child(3) {
+        width: 30%;
+        font-size: 30px;
+    }
+
+    .custom-link {
+        color: #F39F5A;
+        background-color: #dc3545;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .custom-link:hover {
+        color: #F39F5A;
+        background-color: #AE445A;
+    }
+    button a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: #F39F5A;
+        font: small-caps bold 30px Arial, sans-serif;
+    }
+
+    button a:hover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: #F39F5A;
+        font: small-caps bold 35px Arial, sans-serif;
+    }
+    
+    .hp-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .hp-slider-wrapper {
+        margin-top: auto; /* Pushes the slider to the bottom */
+    }
+
+    .hp-slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 20px;
+        background: red;
+        outline: none;
+        opacity: 1;
+        border-radius: 10px;
+    }
+
+    .hp-slider::-webkit-slider-thumb {
+        display: none;
+    }
+
+    .hp-slider:hover {
+        opacity: 1;
+    }
+
+    mark{
+        background-color: inherit;
+        color: #F39F5A;
+    }
+    #hp{
+    }
+    #def{
+
+    }
+    #spd{
+
+    }
+    #loot{
+
+    }
+
+    .enemyImg :hover{
+        cursor: pointer;
+    }
