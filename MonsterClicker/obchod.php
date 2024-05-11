@@ -27,7 +27,7 @@
         <div class="inner-container p-3">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h2 class="display-4">Obchod</h2>
+                  <h2 class="display-4"><s>Obchod</s> List příšer</h2>
               </div>
           </div>
           <div class="row justify-content-center">
@@ -39,13 +39,16 @@
         <div class="inner-container p-3">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h2 class="display-4">Statistiky</h2>
+                  <h2 class="display-4">Zobrazit list příšer</h2>
               </div>
           </div>
-            <p>Životy: <mark id="hp">100</mark></p>
-            <p>Obrana: <mark id="def">15</mark></p>
-            <p>Rychlost: <mark id="spd">5</mark></p>
-            <p>Zlato: <mark id="loot">7</mark></p>
+            
+          <form action="xmlUploader.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload XML File" name="submit">
+        </form>
+
+
         </div>
     </div>
 </body>

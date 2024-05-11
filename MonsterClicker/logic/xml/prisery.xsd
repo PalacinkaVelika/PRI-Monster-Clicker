@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="prisera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="jmeno" type="xs:string"/>
+        <xs:element name="imgPath" type="xs:string"/>
+        <xs:element name="vlastnosti">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hp" type="xs:integer"/>
+              <xs:element name="armor" type="xs:integer"/>
+              <xs:element name="speed" type="xs:integer"/>
+              <xs:element name="loot" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="prisery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prisera" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

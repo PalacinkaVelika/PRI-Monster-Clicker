@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <?php
+  session_start();
+
+  if (!isset($_SESSION['player'])) {
+      $_SESSION['player'] = array();
+  }
+  if (!isset($_SESSION['prisera'])) {
+    $_SESSION['prisera'] = array();
+  }
+  ?>
     <div class="main-container">
         <div class="inner-container p-3">
             <button class="list-group-item list-group-item-action custom-link" style="height: 25%; width: 100%; margin-bottom: 10px;">
@@ -30,17 +40,14 @@
                   <h2 class="display-4">Dobrodružství</h2>
               </div>
           </div>
-          <div class="row justify-content-center">
-                <div class="col-6">
-                    <img src="imgs/zombo.png" class="img-fluid square-image enemyImg" alt="Image" >
+          <div class="row justify-content-center cursor-pointer">
+          <div class="col-6 cursor-pointer">
+                    <a href="#" class="btn img-button">
+                        <img src="imgs/zombo.png" class="img-fluid square-image" alt="Image" id="enemyImg">
+                    </a>
                 </div>
           </div>
           
-    <div class="row justify-content-center hp-slider-wrapper">
-        <div class="col-6">
-            <input type="range" min="0" max="100" value="100" class="form-range hp-slider" id="hpSlider">
-        </div>
-    </div>
         </div>
         <div class="inner-container p-3">
           <div class="row justify-content-center">
@@ -54,5 +61,45 @@
             <p>Zlato: <mark id="loot">7</mark></p>
         </div>
     </div>
+    
+    <script>
+        const zombossImage = document.getElementById('enemyImg');
+
+        function UpdateMonsterVisuals(prisera){
+          document.getElementById('hp').textContent  = prisera["vlastnosti"]["hp"];
+          document.getElementById('def').textContent  = prisera["vlastnosti"]["armor"];
+          document.getElementById('spd').textContent  = prisera["vlastnosti"]["speed"];
+          document.getElementById('loot').textContent  = prisera["vlastnosti"]["loot"];
+        }
+        const xhr = new XMLHttpRequest();
+              xhr.open('GET', 'logic/xmlManipulator.php?function=priseraData', true);
+              xhr.onload = function() {
+                  if (xhr.status >= 200 && xhr.status < 300) {
+                      console.log(xhr.responseText);
+                      prisera = JSON.parse(xhr.responseText);
+                      UpdateMonsterVisuals(prisera);
+                  } else {
+                      console.error('Request failed with status:', xhr.status);
+                  }
+              };
+              xhr.send();
+        zombossImage.addEventListener('click', function() {
+              const xhr = new XMLHttpRequest();
+              xhr.open('GET', 'logic/xmlManipulator.php?function=utok', true);
+
+              xhr.onload = function() {
+                  if (xhr.status >= 200 && xhr.status < 300) {
+                      console.log(xhr.responseText);
+                      prisera = JSON.parse(xhr.responseText);
+                      UpdateMonsterVisuals(prisera);
+                  } else {
+                      console.error('Request failed with status:', xhr.status);
+                  }
+              };
+              xhr.send();
+          });
+
+          
+    </script>
 </body>
 </html>

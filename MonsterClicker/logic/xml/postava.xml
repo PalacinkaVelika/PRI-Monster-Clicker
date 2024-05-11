@@ -1,0 +1,12 @@
+<hrac>
+    <jmeno>Chrabrý chábr</jmeno>
+    <vlastnosti>
+        <dmg>10</dmg>
+        <spd>2</spd>
+        <greed>1</greed>
+        <gold>0</gold>
+    </vlastnosti>
+    <inventar>
+
+    </inventar>
+</hrac>

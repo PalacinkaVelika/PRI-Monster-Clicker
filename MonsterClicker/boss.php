@@ -30,17 +30,14 @@
                   <h2 class="display-4">Velké příšery</h2>
               </div>
           </div>
-          <div class="row justify-content-center">
-                <div class="col-6">
-                    <img src="imgs/Zomboss.png" class="img-fluid square-image enemyImg" alt="Image">
+          <div class="row justify-content-center cursor-pointer">
+                <div class="col-6 cursor-pointer">
+                    <a href="#" class="btn img-button">
+                        <img src="imgs/Zomboss.png" class="img-fluid square-image" alt="Image" id="enemyImg">
+                    </a>
                 </div>
           </div>
           
-          <div class="row justify-content-center hp-slider-wrapper">
-              <div class="col-6">
-                  <input type="range" min="0" max="100" value="100" class="form-range hp-slider" id="hpSlider">
-              </div>
-          </div>
         </div>
         <div class="inner-container p-3">
           <div class="row justify-content-center">
@@ -56,10 +53,10 @@
     </div>
 
     <script>
-        const enemyImg = document.getElementByClass('enemyImg');
+        const zombossImage = document.getElementById('enemyImg');
 
         // Add click event listener
-        enemyImg.addEventListener('click', function() {
+        zombossImage.addEventListener('click', function() {
             // Your code to handle the click event goes here
             // For example, you can alert a message
             alert('Image clicked!');

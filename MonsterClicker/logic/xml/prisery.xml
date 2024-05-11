@@ -1,0 +1,32 @@
+<prisery>
+    <prisera>
+        <jmeno>Zombo</jmeno>
+        <imgPath>imgs/zombo.png</imgPath>
+        <vlastnosti>
+            <hp>100</hp>
+            <armor>10</armor>
+            <speed>5</speed>
+            <loot>4</loot>
+        </vlastnosti>
+    </prisera>
+    <prisera>
+        <jmeno>Slithersnap</jmeno>
+        <imgPath>imgs/slithersnap.png</imgPath>
+        <vlastnosti>
+            <hp>80</hp>
+            <armor>20</armor>
+            <speed>8</speed>
+            <loot>3</loot>
+        </vlastnosti>
+    </prisera>
+    <prisera>
+        <jmeno>Shadowclaw</jmeno>
+        <imgPath>imgs/shadowclaw.png</imgPath>
+        <vlastnosti>
+            <hp>70</hp>
+            <armor>30</armor>
+            <speed>42</speed>
+            <loot>5</loot>
+        </vlastnosti>
+    </prisera>
+</prisery>
