@@ -5,21 +5,39 @@
             <head>
                 <title>Monsters</title>
                 <style>
+                    body {
+                        background-color: #451952;
+                        padding-left: 2vh;
+                        padding-right: 2vh;
+                        color: #F39F5A;
+                        font: small-caps bold 30px Arial, sans-serif;
+                    }
+                    h2 {
+                        text-align: center;
+                        color: #F39F5A;
+                    }
                     table {
-                        width: 100%;
+                        width: 80%;
+                        margin: 20px auto;
                         border-collapse: collapse;
+                        border: 2px solid #666;
+                        background-color: #662549;
+                        font: small-caps bold 30px Arial, sans-serif;
                     }
                     th, td {
-                        border: 1px solid black;
-                        padding: 8px;
-                        text-align: left;
+                        border: 1px solid #666;
+                        padding: 10px;
+                        text-align: center;
                     }
                     th {
-                        background-color: #f2f2f2;
+                        background-color: #46142f;
+                        color: #F39F5A;
                     }
-                    img {
+                    td img {
                         max-width: 100px;
                         max-height: 100px;
+                        display: block;
+                        margin: 0 auto;
                     }
                 </style>
             </head>
